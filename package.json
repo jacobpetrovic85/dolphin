@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "React proj",
   "main": "index.js",
-  "pre-commit": ["lint"]
+  "pre-commit": [
+    "lint"
+  ],
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon ./index.js --exec babel-node",
     "lint": "eslint . --ext .js,.jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +24,10 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.5",
+    "save-dev": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",

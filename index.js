@@ -1,9 +1,20 @@
 /**
  * index.js
  */
-const logSomething = options => ({
-  ...options,
-  anotherOption: 'Hello!'
+import express from 'express';
+import http from 'http';
+
+//  express app setup
+const app = express();
+
+const server = http.createServer(app);
+server.listen(3000);
+server.on('listening', () => {
+  console.log('Serveris listening on port: 3000');
 });
 
-const options = logSomething({ one: '1', two: '2' });
+app.get('*', (req, res) => {
+  res.end('Hello, Expresssss');
+
+
+});

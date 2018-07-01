@@ -1,0 +1,5 @@
+extends layout
+
+block content
+  h1 this is an error
+  p Something went terribly wrong
